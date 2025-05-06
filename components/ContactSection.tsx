@@ -1,22 +1,33 @@
-import { forwardRef } from "react";
+import { forwardRef, ReactElement } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { siteConfig } from "@/lib/siteConfig";
 
-const contactLinks = [
+type ContactLink = {
+  key: string;
+  label: string;
+  sub: string;
+  icon: ReactElement;
+  href: string;
+};
+
+const contactLinks: ContactLink[] = [
   {
+    key: '1op',
     label: "Let's Connect",
     sub: "on LinkedIn",
     icon: <FaLinkedin className='text-blue-600 text-xl' />,
     href: siteConfig.linkedIn,
   },
   {
+    key: '2op',
     label: "GitHub",
     sub: "@lizardoravelo",
     icon: <FaGithub className='text-white text-xl' />,
     href: siteConfig.github,
   },
   {
+    key: '3op',
     label: "Email Me",
     sub: siteConfig.email,
     icon: <FaEnvelope className='text-red-500 text-xl' />,
@@ -37,9 +48,9 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
           transition={{ duration: 0.5 }}
           className='max-w-md mx-auto bg-white/90 dark:bg-neutral-800/90 backdrop-blur-md p-6 rounded-2xl shadow-lg space-y-4'
         >
-          {contactLinks.map((link, idx) => (
+          {contactLinks.map((link) => (
             <a
-              key={idx}
+              key={link.key}
               href={link.href}
               target='_blank'
               rel='noopener noreferrer'

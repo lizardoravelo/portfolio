@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import { motion } from "framer-motion";
 
 type ProjectCardProps = {
+  key: string;
   title: string;
   description: string;
   link: string;
@@ -59,8 +60,8 @@ const ProjectsSection = forwardRef<HTMLElement>((props, ref) => {
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {projects.length > 0 ? (
-            projects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
+            projects.map((project) => (
+              <ProjectCard {...project} />
             ))
           ) : (
             <p className="text-center col-span-full text-neutral-500 dark:text-neutral-400">

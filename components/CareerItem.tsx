@@ -2,6 +2,7 @@ import { memo } from "react";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 
 export type CareerItemProps = {
+  key: string;
   year: string;
   title: string;
   company: {
@@ -38,7 +39,7 @@ const CareerItem = memo(({ year, title, company, summary, technologies, isLast }
       <div className='flex flex-wrap gap-2 mt-4'>
         {technologies.map((tech, index) => (
           <span
-            key={index}
+            key={`${tech}-${index}`}
             className='px-3 py-1 text-sm rounded-full bg-neutral-200 dark:bg-neutral-700 text-neutral-800 dark:text-white'
           >
             {tech}

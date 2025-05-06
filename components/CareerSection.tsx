@@ -1,21 +1,11 @@
 import { forwardRef } from "react";
 import CareerItem from "@/components/CareerItem";
-
-export type CareerItemProps = {
-  year: string;
-  title: string;
-  company: {
-    name: string;
-    url: string;
-  };
-  summary: string;
-  technologies: string[];
-  isLast: boolean;
-};
+import { CareerItemProps } from "@/components/CareerItem";
 
 const CareerSection = forwardRef<HTMLElement>((props, ref) => {
   const careerPath: Omit<CareerItemProps, "isLast">[] = [
     {
+      key: '1n',
       year: "Jun 2023 - May 2024",
       title: "Senior Software Engineer",
       company: {
@@ -38,6 +28,7 @@ const CareerSection = forwardRef<HTMLElement>((props, ref) => {
       ],
     },
     {
+      key: '2n',
       year: "Dec 2021 - Jun 2023",
       title: "Senior Software Engineer",
       company: {
@@ -59,6 +50,7 @@ const CareerSection = forwardRef<HTMLElement>((props, ref) => {
       ],
     },
     {
+      key: '3k',
       year: "Apr 2020 - Dec 2021",
       title: "Lead Developer",
       company: {
@@ -70,6 +62,7 @@ const CareerSection = forwardRef<HTMLElement>((props, ref) => {
       technologies: [".NET Core", "React.js", "MS SQL Server", "TFS", "Material UI", "Azure", "Bootstrap"],
     },
     {
+      key: '4l',
       year: "Apr 2019 - Apr 2020",
       title: "Software Developer I",
       company: {
@@ -81,6 +74,7 @@ const CareerSection = forwardRef<HTMLElement>((props, ref) => {
       technologies: [".NET Core", "React.js", "MS SQL Server", "T-SQL", ".Net", "R", "Azure", "Bootstrap"],
     },
     {
+      key: '5g',
       year: "Apr 2018 - Apr 2019",
       title: "Database Administrator",
       company: {
@@ -92,6 +86,7 @@ const CareerSection = forwardRef<HTMLElement>((props, ref) => {
       technologies: ["SQL Server", "SSIS", "SSAS", "Tableau", ".NET", "Dynamics GP", "R", "Bootstrap"],
     },
     {
+      key: '6u',
       year: "Sep 2014 - Apr 2018",
       title: "Senior Developer",
       company: {
@@ -103,6 +98,7 @@ const CareerSection = forwardRef<HTMLElement>((props, ref) => {
       technologies: [".NET", "jQuery", "SQL Server", "SSIS", "SSAS", "Dynamics GP", "Bootstrap"],
     },
     {
+      key: '7e',
       year: "Feb 2014 - Aug 2014",
       title: "Junior Developer",
       company: {
@@ -113,6 +109,7 @@ const CareerSection = forwardRef<HTMLElement>((props, ref) => {
       technologies: [".NET", "JavaScript", "jQuery", "MS SQL Server", "Bootstrap"],
     },
     {
+      key: '8q',
       year: "Jan 2013 - Jan 2014",
       title: "Developer",
       company: {
@@ -132,7 +129,7 @@ const CareerSection = forwardRef<HTMLElement>((props, ref) => {
         </h2>
         <div className='max-w-3xl mx-auto relative'>
           {careerPath.map((item, index) => (
-            <CareerItem key={index} {...item} isLast={index === careerPath.length - 1} />
+            <CareerItem {...item} isLast={index === careerPath.length - 1} />
           ))}
         </div>
       </div>

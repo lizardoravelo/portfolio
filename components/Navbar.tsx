@@ -22,7 +22,7 @@ const menuOptions: { name: string; key: SectionKey }[] = [
   { name: "Contact", key: "contact" },
 ];
 
-export default function Navbar({ activeSection, scrollTo }: NavbarProps) {
+export default function Navbar({ activeSection, scrollTo }: Readonly<NavbarProps>) {
   const { theme, setTheme } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
 

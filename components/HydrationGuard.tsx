@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function HydrationGuard({ children }: { children: React.ReactNode }) {
+export default function HydrationGuard({ children }: Readonly<{ children: React.ReactNode }>) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
