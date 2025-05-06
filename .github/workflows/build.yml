@@ -23,5 +23,6 @@ jobs:
           args: >
             -Dsonar.projectKey=lizardoravelo_portfolio
             -Dsonar.organization=lizardoravelo
+            -Dsonar.javascript.lcov.reportPaths=
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
