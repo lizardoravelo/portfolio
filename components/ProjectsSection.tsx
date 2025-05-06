@@ -64,7 +64,7 @@ const ProjectsSection = forwardRef<HTMLElement>((props, ref) => {
               <ProjectCard {...project} />
             ))
           ) : (
-            <p className="text-center col-span-full text-neutral-500 dark:text-neutral-400">
+            <p className="text-center col-span-full text-neutral-500 dark:text-neutral-400 drop-shadow">
               No projects available yet.
             </p>
           )}
