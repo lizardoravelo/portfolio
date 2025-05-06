@@ -91,8 +91,8 @@ Update the arrays and props with your own data.
 If you'd like to connect, feel free to reach out:
 
 - 📧 Email: `your@email.com`
-- 💼 [LinkedIn](https://linkedin.com/in/yourprofile)
-- 🖥️ [GitHub](https://github.com/your-username)
+- 💼 [LinkedIn](https://www.linkedin.com/in/julio-lizardo/)
+- 🖥️ [GitHub](https://github.com/lizardoravelo)
 
 ---
 
