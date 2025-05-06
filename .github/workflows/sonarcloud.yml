@@ -1,4 +1,4 @@
-name: Build
+name: SonarCloud
 
 on:
   push:
@@ -8,15 +8,20 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  sonarqube:
-    name: SonarQube
+  build:
+    name: SonarCloud Scan
     runs-on: macos-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0  # Required for SonarCloud
 
-      - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v5
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v2
+        with:
+          args: >
+            -Dsonar.projectKey=lizardoravelo_portfolio
+            -Dsonar.organization=lizardoravelo
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
