@@ -90,7 +90,6 @@ Update the arrays and props with your own data.
 
 If you'd like to connect, feel free to reach out:
 
-- 📧 Email: `your@email.com`
 - 💼 [LinkedIn](https://www.linkedin.com/in/julio-lizardo/)
 - 🖥️ [GitHub](https://github.com/lizardoravelo)
 
