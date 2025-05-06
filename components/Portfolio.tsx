@@ -42,8 +42,13 @@ export default function Portfolio() {
               explore my work and let’s connect!
             </p>
             <a
+              role="button"
+              tabIndex={0}
               onClick={handleScrollToContact}
-              className='inline-block mt-6 px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 drop-shadow cursor-pointer'
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') handleScrollToContact();
+              }}
+              className="inline-block mt-6 px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 drop-shadow cursor-pointer"
             >
               🚀 Let’s Work Together
             </a>

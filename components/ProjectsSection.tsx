@@ -58,9 +58,15 @@ const ProjectsSection = forwardRef<HTMLElement>((props, ref) => {
           Projects
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
+          {projects.length > 0 ? (
+            projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))
+          ) : (
+            <p className="text-center col-span-full text-neutral-500 dark:text-neutral-400">
+              No projects available yet.
+            </p>
+          )}
         </div>
       </div>
     </section>
