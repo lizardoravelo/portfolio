@@ -43,14 +43,14 @@ const AboutSection = forwardRef<HTMLElement>((props, ref) => {
 
           <div className='flex flex-col sm:flex-row justify-center gap-4 mt-6'>
             <a
-              href='/Julio_Lizardo_Resume_Full.pdf'
+              href='./Julio_Lizardo_Resume_Full.pdf'
               download
               className='inline-block px-5 py-2 text-base font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition drop-shadow'
             >
               📄 Download Full Resume
             </a>
             <a
-              href='/Julio_Lizardo_Resume_Short.pdf'
+              href='./Julio_Lizardo_Resume_Short.pdf'
               download
               className='inline-block px-5 py-2 text-base font-medium text-blue-600 border border-blue-600 rounded-md hover:bg-blue-100 transition dark:hover:bg-blue-900 drop-shadow'
             >
