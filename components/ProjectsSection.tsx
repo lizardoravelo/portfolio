@@ -30,26 +30,12 @@ const ProjectCard = ({ title, description, link }: ProjectCardProps) => (
 
 const ProjectsSection = forwardRef<HTMLElement>((props, ref) => {
   const projects: ProjectCardProps[] = [
-    // {
-    //   title: "E-commerce Platform",
-    //   description: "A full-stack e-commerce solution with React and Node.js, prepare with Stripe and Blockchain integration",
-    //   link: "#",
-    // },
-    // {
-    //   title: "Web Chat Room",
-    //   description: "Real-time Chat room with WebSocket and Rest API, made with React.js, Node.js, Express and Socket.io",
-    //   link: "#",
-    // },
-    // {
-    //   title: "UML Drag and Drop Generator",
-    //   description: "App to create UML Diagram using Drag and Drop",
-    //   link: "#",
-    // },
-    // {
-    //   title: "Others...",
-    //   description: "App to create UML Diagram using Drag and Drop",
-    //   link: "#",
-    // },
+    {
+      title: "Web Chat Room",
+      description: "A scalable real-time chat app built with REST APIs and WebSockets using Node.js, Express, and Socket.IO. Includes user authentication, room management, and full Swagger documentation.",
+      link: "https://chatroom-rest-production.up.railway.app/api-docs",
+      key: "chat-room"
+    }
   ];
 
   return (
