@@ -31,12 +31,21 @@ const ProjectCard = ({ title, description, link }: ProjectCardProps) => (
 const ProjectsSection = forwardRef<HTMLElement>((props, ref) => {
   const projects: ProjectCardProps[] = [
     {
-      title: "Web Chat Room",
-      description: "A scalable real-time chat app built with REST APIs and WebSockets using Node.js, Express, and Socket.IO. Includes user authentication, room management, and full Swagger documentation.",
-      link: "https://chatroom-rest-production.up.railway.app/api-docs",
+      title: "Login with Auth0",
+      description:
+        "Login portal built with React and Auth0. This authentication service provides a JWT required to access protected APIs in other projects like the Web Chat Room. Start here to log in and get your token.",
+      link: "https://lizardoravelo.github.io/auth-portal/",
+      key: "auth-login"
+    },
+    {
+      title: "Web Chat Room (Server)",
+      description:
+        "A scalable real-time chat app server built with REST APIs and WebSockets using Node.js, Typescript, Express, and Socket.IO. Deployed on Railway, it includes user authentication, room management, and full Swagger documentation. Requires a JWT from the Auth Login project.",
+      link: "https://chatroom-auth0-production.up.railway.app/api-docs",
       key: "chat-room"
     }
   ];
+  
 
   return (
     <section ref={ref} className='min-h-screen flex items-center justify-center snap-start py-20'>
