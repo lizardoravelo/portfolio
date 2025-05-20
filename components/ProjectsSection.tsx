@@ -33,19 +33,25 @@ const ProjectsSection = forwardRef<HTMLElement>((props, ref) => {
     {
       title: "Login with Auth0",
       description:
-        "Login portal built with React and Auth0. This authentication service provides a JWT required to access protected APIs in other projects like the Web Chat Room. Start here to log in and get your token.",
+        "Login portal built with React and Auth0. This authentication service provides a JWT required to access protected APIs in other projects like the Web Chat Room with Auth0. Start here to log in and get your token.",
       link: "https://lizardoravelo.github.io/auth-portal/",
       key: "auth-login"
     },
     {
-      title: "Web Chat Room (Server)",
+      title: "Web Chat Room (Server) with Auth0",
       description:
-        "A scalable real-time chat app server built with REST APIs and WebSockets using Node.js, Typescript, Express, and Socket.IO. Deployed on Railway, it includes user authentication, room management, and full Swagger documentation. Requires a JWT from the Auth Login project.",
+        "A scalable real-time chat app server built with REST APIs and WebSockets using Node.js, TypeScript, Express, and Socket.IO. Deployed on Railway, it uses Auth0 for authentication, supports room management, and includes full Swagger documentation. Requires a JWT from the Auth Login project.",
       link: "https://chatroom-auth0-production.up.railway.app/api-docs",
-      key: "chat-room"
+      key: "chat-room-auth0"
+    },
+    {
+      title: "Web Chat Room (Server) with Plain Auth",
+      description:
+        "An alternative version of the chat app server using custom authentication without Auth0. Built with Node.js, TypeScript, Express, and Socket.IO. Deployed on Railway with full Swagger documentation and includes its own login flow to generate JWTs — no external login app needed.",
+      link: "https://chatroom-rest-production.up.railway.app/api-docs/",
+      key: "chat-room-plain-auth"
     }
   ];
-  
 
   return (
     <section ref={ref} className='min-h-screen flex items-center justify-center snap-start py-20'>
